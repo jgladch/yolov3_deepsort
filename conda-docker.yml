@@ -1,4 +1,4 @@
-name: tracker-cpu
+name: tracker-docker
 
 dependencies:
   - python==3.7
