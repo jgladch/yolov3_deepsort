@@ -7,6 +7,10 @@ WORKDIR /usr/src/app
 # Copy contents
 COPY . /usr/src/app
 
+# RUN pip uninstall -y opencv-python
+RUN apt-get update
+RUN apt-get install -y libgtk2.0-dev pkg-config
+
 RUN conda env create -f conda-cpu.yml
 
 # Make RUN commands use the new environment:
