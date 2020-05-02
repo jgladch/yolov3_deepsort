@@ -8,8 +8,8 @@ WORKDIR /usr/src/app
 COPY . /usr/src/app
 
 # RUN pip uninstall -y opencv-python
-RUN apt-get update
-RUN apt-get install -y libgtk2.0-dev pkg-config
+# RUN apt-get update
+# RUN apt-get install -y libgtk2.0-dev pkg-config libglib2.0-0 libsm6 libxext6 libxrender1
 
 RUN conda env create -f conda-cpu.yml
 
@@ -17,6 +17,6 @@ RUN conda env create -f conda-cpu.yml
 # SHELL ["conda", "run", "-n", "tracker-cpu", "/bin/bash", "-c"]
 
 # Activate the environment, and make sure it's activated:
-RUN echo "conda init bash" > ~/.bashrc
-RUN echo "source /opt/conda/etc/profile.d/conda.sh" > ~/.bashrc
-RUN echo "conda activate tracker-cpu" > ~/.bashrc
+# RUN echo "conda init bash" > ~/.bashrc
+# RUN echo "source /opt/conda/etc/profile.d/conda.sh" > ~/.bashrc
+# RUN echo "conda activate tracker-cpu" > ~/.bashrc
