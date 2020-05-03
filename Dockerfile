@@ -12,7 +12,7 @@ RUN apt-get update
 RUN apt-get install -y libgtk2.0-dev pkg-config
 
 RUN conda update conda
-RUN conda env create -f conda-cpu.yml
+RUN conda env create -f conda-docker.yml
 
 # Make RUN commands use the new environment:
 # SHELL ["conda", "run", "-n", "tracker-cpu", "/bin/bash", "-c"]

@@ -10,3 +10,4 @@ dependencies:
     - tqdm
     - seaborn
     - pillow
+    - opencv-python-headless
