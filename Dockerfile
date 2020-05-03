@@ -14,8 +14,11 @@ COPY . /usr/src/app
 # RUN conda update conda
 RUN conda env create -f conda-docker.yml
 
+RUN pip install numpy
+
 SHELL ["conda", "run", "-n", "tracker-docker", "/bin/bash", "-c"]
 
+RUN pip install numpy
 RUN cd ~/ &&\
   git clone https://github.com/Itseez/opencv.git &&\
   git clone https://github.com/Itseez/opencv_contrib.git &&\
