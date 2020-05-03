@@ -9,7 +9,6 @@ COPY . /usr/src/app
 
 # RUN pip uninstall -y opencv-python
 RUN apt-get update
-RUN apt-get install -y libgtk2.0-dev pkg-config
 
 RUN conda update conda
 RUN conda env create -f conda-docker.yml
